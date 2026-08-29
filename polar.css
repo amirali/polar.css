@@ -256,11 +256,9 @@ details {
   box-shadow: var(--shadow-sm);
 }
 
-header,
 article,
 section,
 aside,
-nav,
 form,
 table,
 details {

@@ -26,6 +26,9 @@ Force a theme manually:
 
 ```html
 <html lang="en" data-theme="light"></html>
+```
+
+```html
 <html lang="en" data-theme="dark"></html>
 ```
 

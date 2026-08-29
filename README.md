@@ -31,8 +31,8 @@ Force a theme manually:
 
 ## Files
 
-- `/home/runner/work/polar.css/polar.css/polar.css` — main stylesheet
-- `/home/runner/work/polar.css/polar.css/index.html` — demo page
+- `polar.css` — main stylesheet
+- `index.html` — demo page
 
 ## Design goals
 

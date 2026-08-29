@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>polar.css — Nordic classless CSS</title>
+    <link rel="stylesheet" href="./polar.css" />
+  </head>
+  <body>
+    <header>
+      <h1>polar.css</h1>
+      <p>
+        A tiny classless stylesheet inspired by MVP.css and Water.css, built around
+        light and dark Nord-flavored palettes.
+      </p>
+      <nav>
+        <ul>
+          <li><a href="#content">Content</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#data">Data</a></li>
+          <li><a href="#notes">Notes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="content">
+        <header>
+          <h2>Readable defaults</h2>
+          <p>
+            Bring clean typography, spacing, and semantic layout to raw HTML without
+            utility classes.
+          </p>
+        </header>
+        <article>
+          <h3>Typography</h3>
+          <p>
+            This theme keeps contrast soft but readable, using <strong>Nord-inspired</strong>
+            surfaces and accents. Links, lists, <code>inline code</code>, and block
+            content all work out of the box.
+          </p>
+          <blockquote>
+            “Design should stay out of the way until it has something useful to say.”
+          </blockquote>
+          <pre><code>npm install polar.css
+&lt;link rel="stylesheet" href="polar.css" /&gt;</code></pre>
+        </article>
+      </section>
+
+      <section id="forms">
+        <header>
+          <h2>Forms</h2>
+        </header>
+        <form>
+          <p>
+            Toggle the theme by changing the <code>data-theme</code> attribute on the
+            root element to <code>light</code>, <code>dark</code>, or omit it to follow
+            system preference.
+          </p>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Ada Lovelace" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="ada@example.com" />
+
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic">
+            <option>Documentation</option>
+            <option>Accessibility</option>
+            <option>UI polish</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your note..."></textarea>
+
+          <fieldset>
+            <legend>Progress</legend>
+            <progress value="72" max="100">72%</progress>
+          </fieldset>
+
+          <p>
+            <button type="submit">Send</button>
+            <button type="reset" class="secondary">Reset</button>
+          </p>
+        </form>
+      </section>
+
+      <section id="data">
+        <header>
+          <h2>Tables</h2>
+        </header>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Default feel</th>
+              <th>Accent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cards</td>
+              <td>Frosted panel</td>
+              <td>Subtle shadow</td>
+            </tr>
+            <tr>
+              <td>Forms</td>
+              <td>Rounded controls</td>
+              <td>Nord blue focus ring</td>
+            </tr>
+            <tr>
+              <td>Code</td>
+              <td>Soft inset</td>
+              <td>Monospace tokens</td>
+            </tr>
+          </tbody>
+          <caption>Everything here uses plain semantic HTML.</caption>
+        </table>
+      </section>
+
+      <section id="notes">
+        <header>
+          <h2>Notes</h2>
+        </header>
+        <details>
+          <summary>Why classless?</summary>
+          <p>
+            It is ideal for prototypes, docs, personal sites, and MVPs where raw HTML
+            should already feel designed.
+          </p>
+          <p>
+            <mark>Tip:</mark> remove <code>data-theme="light"</code> from this file to
+            preview automatic dark mode via <code>prefers-color-scheme</code>.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made for simple pages that want a cold, calm Nordic vibe.</p>
+    </footer>
+  </body>
+</html>

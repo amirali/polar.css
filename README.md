@@ -25,8 +25,8 @@ Follow system theme automatically:
 Force a theme manually:
 
 ```html
-<html lang="en" data-theme="light">
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light"></html>
+<html lang="en" data-theme="dark"></html>
 ```
 
 ## Files

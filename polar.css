@@ -1,4 +1,5 @@
-:root {
+:root,
+:root[data-theme="light"] {
   color-scheme: light dark;
   --font-body: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
@@ -33,7 +34,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme]) {
     --background: #2e3440;
     --surface: #3b4252;
     --surface-strong: #434c5e;
@@ -52,26 +53,6 @@
     --shadow: 0 22px 48px rgba(15, 18, 25, 0.38);
     --shadow-sm: 0 12px 28px rgba(15, 18, 25, 0.24);
   }
-}
-
-:root[data-theme="light"] {
-  --background: #eceff4;
-  --surface: #e5e9f0;
-  --surface-strong: #d8dee9;
-  --surface-elevated: rgba(255, 255, 255, 0.66);
-  --surface-inset: rgba(216, 222, 233, 0.6);
-  --text: #2e3440;
-  --text-muted: #4c566a;
-  --text-soft: #6b7280;
-  --border: rgba(76, 86, 106, 0.16);
-  --border-strong: rgba(76, 86, 106, 0.24);
-  --accent: #5e81ac;
-  --accent-strong: #4c6c94;
-  --accent-soft: rgba(94, 129, 172, 0.14);
-  --accent-contrast: #f8fafc;
-  --selection: rgba(94, 129, 172, 0.22);
-  --shadow: 0 18px 40px rgba(46, 52, 64, 0.12);
-  --shadow-sm: 0 10px 24px rgba(46, 52, 64, 0.08);
 }
 
 :root[data-theme="dark"] {
@@ -265,6 +246,16 @@ details {
   border-radius: var(--radius);
   background: var(--surface-elevated);
   box-shadow: var(--shadow-sm);
+}
+
+header,
+article,
+section,
+aside,
+nav,
+form,
+table,
+details {
   backdrop-filter: blur(14px);
 }
 
@@ -430,7 +421,8 @@ textarea:disabled {
   cursor: not-allowed;
 }
 
-button[type="reset"] {
+button[type="reset"],
+input[type="reset"] {
   background: var(--surface-strong);
   border-color: var(--border);
   color: var(--text);

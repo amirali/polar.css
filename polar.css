@@ -139,7 +139,6 @@ aside,
 nav,
 form,
 table,
-pre,
 blockquote,
 details {
   margin: 0 0 var(--space-lg);
@@ -326,7 +325,10 @@ samp {
 pre {
   padding: 1rem 1.1rem;
   overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   background: var(--surface);
+  box-shadow: var(--shadow-sm);
 }
 
 pre code {

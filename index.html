@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,9 +53,9 @@
         </header>
         <form>
           <p>
-            Toggle the theme by changing the <code>data-theme</code> attribute on the
-            root element to <code>light</code>, <code>dark</code>, or omit it to follow
-            system preference.
+            This demo follows your system theme automatically. Set
+            <code>data-theme="light"</code> or <code>data-theme="dark"</code> on the
+            root element to force a specific mode.
           </p>
           <label for="name">Name</label>
           <input id="name" name="name" type="text" placeholder="Ada Lovelace" />
@@ -129,8 +129,9 @@
             should already feel designed.
           </p>
           <p>
-            <mark>Tip:</mark> remove <code>data-theme="light"</code> from this file to
-            preview automatic dark mode via <code>prefers-color-scheme</code>.
+            <mark>Tip:</mark> add <code>data-theme="light"</code> or
+            <code>data-theme="dark"</code> to the root element if you want to pin the
+            theme instead of following <code>prefers-color-scheme</code>.
           </p>
         </details>
       </section>

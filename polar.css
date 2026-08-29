@@ -31,6 +31,8 @@
   --warning: #ebcb8b;
   --danger: #bf616a;
   --selection: rgba(94, 129, 172, 0.22);
+  --focus-ring: rgba(94, 129, 172, 0.42);
+  --mark-bg: rgba(235, 203, 139, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,6 +55,8 @@
     --selection: rgba(136, 192, 208, 0.24);
     --shadow: 0 22px 48px rgba(15, 18, 25, 0.38);
     --shadow-sm: 0 12px 28px rgba(15, 18, 25, 0.24);
+    --focus-ring: rgba(136, 192, 208, 0.45);
+    --mark-bg: rgba(235, 203, 139, 0.32);
   }
 }
 
@@ -75,6 +79,8 @@
   --selection: rgba(136, 192, 208, 0.24);
   --shadow: 0 22px 48px rgba(15, 18, 25, 0.38);
   --shadow-sm: 0 12px 28px rgba(15, 18, 25, 0.24);
+  --focus-ring: rgba(136, 192, 208, 0.45);
+  --mark-bg: rgba(235, 203, 139, 0.32);
 }
 
 *,
@@ -444,7 +450,7 @@ textarea:focus-visible,
 button:focus-visible,
 a:focus-visible,
 summary:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--accent) 42%, white);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -472,7 +478,7 @@ details summary {
 }
 
 mark {
-  background: color-mix(in srgb, var(--warning) 46%, white);
+  background: var(--mark-bg);
   color: var(--text);
   border-radius: 0.3rem;
   padding: 0.08em 0.24em;

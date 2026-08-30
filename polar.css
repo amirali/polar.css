@@ -382,6 +382,56 @@ label {
   font-weight: 600;
 }
 
+[data-layout="grid"],
+.inline-grid {
+  display: grid;
+  gap: var(--space-md);
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
+[data-layout="flex"],
+.inline-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+[data-layout="grid"] > *,
+.inline-grid > *,
+[data-layout="flex"] > *,
+.inline-flex > * {
+  margin: 0;
+}
+
+[data-field],
+.field {
+  display: grid;
+  gap: var(--space-xs);
+  min-width: min(100%, 14rem);
+}
+
+[data-layout="flex"] > [data-field],
+[data-layout="flex"] > .field,
+.inline-flex > [data-field],
+.inline-flex > .field {
+  flex: 1 1 14rem;
+}
+
+[data-actions],
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+[data-actions] > *,
+.actions > * {
+  margin: 0;
+}
+
 input,
 select,
 textarea {
@@ -499,6 +549,18 @@ mark {
   nav ul {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  [data-layout="flex"],
+  .inline-flex {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+  }
+
+  [data-layout="grid"],
+  .inline-grid {
+    grid-template-columns: 1fr;
   }
 
   table {

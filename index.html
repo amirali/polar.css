@@ -45,6 +45,22 @@
           <pre><code>npm install polar.css
 &lt;link rel="stylesheet" href="polar.css" /&gt;</code></pre>
         </article>
+        <div data-layout="grid">
+          <article>
+            <h3>Inline with grid</h3>
+            <p>
+              Use <code>data-layout="grid"</code> or <code>class="inline-grid"</code>
+              when cards, fields, or other blocks should sit side by side.
+            </p>
+          </article>
+          <article>
+            <h3>Inline with flex</h3>
+            <p>
+              Use <code>data-layout="flex"</code> or <code>class="inline-flex"</code>
+              when items should wrap fluidly in a row.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section id="forms">
@@ -57,28 +73,38 @@
             <code>data-theme="light"</code> or <code>data-theme="dark"</code> on the
             root element to force a specific mode.
           </p>
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Ada Lovelace" />
+          <div data-layout="grid">
+            <div data-field>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Ada Lovelace" />
+            </div>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="ada@example.com" />
+            <div data-field>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="ada@example.com" />
+            </div>
 
-          <label for="topic">Topic</label>
-          <select id="topic" name="topic">
-            <option>Documentation</option>
-            <option>Accessibility</option>
-            <option>UI polish</option>
-          </select>
+            <div data-field>
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic">
+                <option>Documentation</option>
+                <option>Accessibility</option>
+                <option>UI polish</option>
+              </select>
+            </div>
+          </div>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Your note..."></textarea>
+          <div data-field>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your note..."></textarea>
+          </div>
 
           <fieldset>
             <legend>Progress</legend>
             <progress value="72" max="100">72%</progress>
           </fieldset>
 
-          <p>
+          <p data-actions>
             <button type="submit">Send</button>
             <button type="reset">Reset</button>
           </p>

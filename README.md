@@ -13,8 +13,16 @@ A tiny classless CSS theme inspired by [MVP.css](https://andybrewer.github.io/mv
 
 ## Usage
 
+Local file:
+
 ```html
 <link rel="stylesheet" href="polar.css" />
+```
+
+Remote (via GitHub raw):
+
+```html
+<link rel="stylesheet" href="https://raw.githubusercontent.com/amirali/polar.css/main/polar.css" />
 ```
 
 Follow system theme automatically:

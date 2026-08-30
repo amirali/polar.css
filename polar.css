@@ -409,8 +409,14 @@ label {
 .field {
   display: grid;
   gap: var(--space-xs);
-  flex: 1 1 14rem;
   min-width: min(100%, 14rem);
+}
+
+[data-layout="flex"] > [data-field],
+[data-layout="flex"] > .field,
+.inline-flex > [data-field],
+.inline-flex > .field {
+  flex: 1 1 14rem;
 }
 
 [data-actions],

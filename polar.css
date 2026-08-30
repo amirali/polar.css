@@ -395,7 +395,7 @@ label {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 [data-layout="grid"] > *,
@@ -555,6 +555,11 @@ mark {
   .inline-flex {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  [data-layout="grid"],
+  .inline-grid {
+    grid-template-columns: 1fr;
   }
 
   table {
